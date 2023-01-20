@@ -1,0 +1,9 @@
+scrape_configs:
+  - job_name: 'esp_node1'
+    scrape_interval: 5s
+    scheme: http
+    tls_config:
+      insecure_skip_verify: true
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['x.x.x.x:8022']
